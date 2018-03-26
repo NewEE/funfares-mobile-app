@@ -1,0 +1,87 @@
+<Alloy>
+	<!--  -->
+	<Collection src="webFans"/>
+	<Collection src="Map"/>
+
+	<Collection src="FanFares"/>
+
+
+	<TabGroup>
+
+		<!-- Home tab -->
+		<Tab title="Home" icon="KS_nav_views.png">
+			<Window title="Homepage">
+				<TableView dataCollection="webFans" dataTransform="F_transformFunction"  onClick="clickDetails"  >
+					<TableViewRow layout="vertical" rowid="{id}"  city="{city}">
+
+						<ImageView image="{Image}" top=20 />
+						<Label text="{City} [Quota: {Quota}]" bottom=20 top=20 />
+
+					</TableViewRow>
+				</TableView>
+			</Window>
+		</Tab>
+
+		<!-- class tab -->
+		<Tab title="Class" icon="KS_nav_views.png">
+			<Window title="Choose Class">
+				<TableView onClick="tableClickClass">
+
+					<TableViewSection headerTitle="Business Class">
+						<TableViewRow title="Under $7000" classType="2" pType="Under" pRange="7000" hasChild=true />
+						<TableViewRow title="Above $7000" classType="2" pType="Above" pRange="7000" hasChild=true />
+					</TableViewSection>
+
+					<TableViewSection headerTitle="Economy Class">
+						<TableViewRow title="Under $5000" classType="1" pType="Under" pRange="5000" hasChild=true />
+						<TableViewRow title="Above $5000" classType="1" pType="Above" pRange="5000" hasChild=true />
+					</TableViewSection>
+
+				</TableView>
+			</Window>
+		</Tab>
+
+		<!-- Region tab -->
+		<Tab title="Region" icon="KS_nav_views.png">
+			<Window title="Choose Region">
+				<TableView onClick="tableClickRegion" dataCollection="FanFares"  dataTransform="dataTransformRegion">
+
+					<TableViewSection headerTitle="{HeaderTitle}">           
+                        <TableViewRow title="{City}" region="{Region}" city="{City}" hasChild=true />
+                    </TableViewSection>  
+				</TableView>
+			</Window>
+		</Tab>
+
+
+		<!-- Map tab -->
+		<Tab title="Map" icon="KS_nav_views.png">
+			<Window title="Map">
+				<Module  module="ti.map" method="createView" userLocation=true dataCollection="Map" dataTransform="MapTransform" onClick="btClick">
+
+				</Module>
+			</Window>
+		</Tab>
+
+		<!-- More tab -->
+		<Tab title="More" icon="KS_nav_views.png">
+			<Window title="More">
+				<TableView >
+					<TableViewRow layout="horizontal" bottom=20>
+						<ImageView id="imageID" image="/images/imgs/plane.png" />
+						<Label id="userWelcome" left="20" right="20"  width='100'/>
+					</TableViewRow>
+
+					<TableViewSection headerTitle="User Info" onClick="tableClickMore" height='60'>
+						<TableViewRow title="Login/Logoff" hasChild=true tabType="Log" />
+						<TableViewRow title="Booked Packages" hasChild=true tabType="Order" />
+						<TableViewRow title="Above Us" hasChild=true tabType="AboutUs" />
+					</TableViewSection>
+
+				</TableView>
+			</Window>
+		</Tab>
+
+
+	</TabGroup>
+</Alloy>

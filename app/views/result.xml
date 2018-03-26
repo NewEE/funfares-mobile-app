@@ -1,0 +1,22 @@
+<Alloy>
+    <Collection src="webFans" />
+    <Window id="win" title="Details">
+
+        <TableView dataCollection="webFans" dataFilter="F_fileterResult" dataTransform="F_transFormResult">
+            <TableViewRow layout="vertical">
+                <ImageView image="{Image}" />
+                <Label text="City: {City}" city='{City}'id ="LabelCss"/>
+                <Label text="Class Type: {Class}" class='{Class}'  id="LabelCss"/>
+                <Label text="Price: {Price}" price='{Price}' id ="LabelCss"/>
+                <Label text="Valid Date Till: {ValidDate}" id ="LabelCss"/>
+                <Label text="Dates: {B_Dates} To {E_Dates}" BDate='{B_Dates}' EDate='{E_Dates}' id ="LabelCss"/>
+                <Label text="Quota Leave: {Quota}" id ="LabelCss"/>
+                <Button title="Address for Visa Application" onClick="viewMapButoon"  city="{City}"  id='ButtonCss'/>
+                <Button title="Booking the Package" onClick="takeOrderButoon"
+                city="{City}"  Class='{Class}' fanID="{id}" BDates ="{B_Dates}" EBates="{E_Dates}" Price="{Price}" Seats="1"
+                 id='ButtonCss' />
+            </TableViewRow>
+        </TableView>
+
+    </Window>
+</Alloy>

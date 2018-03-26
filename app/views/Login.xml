@@ -1,0 +1,12 @@
+<Alloy>
+
+    <Window id="win" title="LOG Info" layout="vertical">
+
+
+        <TextField id="textField" hintText="userid" value='17427916'/>
+        <TextField id="textField2" hintText="password"  value='1' passwordMask="true"/>
+        <Button title="Login" onClick="loginFunction"  />
+
+
+    </Window>
+</Alloy>

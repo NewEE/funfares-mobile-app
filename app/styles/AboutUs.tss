@@ -1,0 +1,5 @@
+
+"#textArea2": {
+    value: "Tel: (852) 3411 7400\nFax : (852) 2338 7644\n\nAddress:\nHong Kong Baptist University, Kowloon Tong, Kowloon\n\nEdit:By Eric\n",
+    autoLink: Titanium.UI.AUTOLINK_PHONE_NUMBERS
+}

@@ -1,0 +1,23 @@
+
+"#LabelCss": {
+	width: Ti.UI.SIZE,
+	height: Ti.UI.SIZE,
+	color: "#000",
+	font: {
+		fontSize: 20,
+		fontFamily: 'Helvetica Neue'
+	},
+	textAlign: 'left',
+	left: '40dp',
+	top: '10'
+},
+
+"#ButtonCss" :{
+	textAlign: 'left',
+	left: '30dp',
+	top : '10',
+	font: {
+		fontSize: 20,
+		fontFamily: 'Helvetica Neue'
+	}
+}

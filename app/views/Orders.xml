@@ -1,0 +1,19 @@
+<Alloy>
+    <Collection src="webOrders" />
+    <Window id="win">
+
+        <TableView dataCollection="webOrders" >
+           <TableViewRow layout="vertical" id='TableViewRowCss'>
+                <Label text="City: {fanCity}"  id ="LabelCss" />
+                <Label text="Fan ItemID: {fanID}"id ="LabelCss" />
+                <Label text="Reserve Seats: {fanSeats}" id ="LabelCss"  />
+                <Label text="Status: {fanStatus}" id ="LabelCss"  />
+                <Label text="Class Type: {fanClass}" id ="LabelCss" />
+                <Label text="Price: {fanPrice}" id ="LabelCss"  />
+                <Label text="Dates: {fanBDate} To {fanEDate}" id ="LabelCss" />
+                <Label text="Transcation Dates: {createdAt}" id ="LabelCss" />                
+           </TableViewRow>
+        </TableView>
+
+    </Window>
+</Alloy>

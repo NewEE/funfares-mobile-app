@@ -1,0 +1,17 @@
+<Alloy>
+   
+    <Collection src="webFans" /> 
+    <Window id="win"> 
+    
+        <TableView dataCollection="webFans" dataFilter="F_filterFunction" onClick="clickConditionsFunction">
+            <TableViewRow title="{title}" />            
+                
+                <TableViewSection headerTitle="">						
+                        <TableViewRow title="{City}. Date Till: {ValidDate}" validDate="{ValidDate}" cityname="{City}" rowid="{id}" hasChild=true />						
+                </TableViewSection> 
+               
+        </TableView>
+    
+
+    </Window>
+</Alloy>

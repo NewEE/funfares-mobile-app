@@ -1,0 +1,14 @@
+<Alloy>    
+  
+
+    <Window id="win" title="Map"> 
+    
+         			
+        <Module  module="ti.map" method="createView" userLocation="true" dataCollection="Map" dataFilter="F_filterLocation" dataTransform="MapTransform">
+            <Annotation longitude="{longitude}" latitude="{latitude}"/>					
+        </Module>
+   
+    </Window>
+
+
+</Alloy>

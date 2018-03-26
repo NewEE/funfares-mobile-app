@@ -1,0 +1,14 @@
+<Alloy>
+
+    <Window id="win" title="About Us">
+
+			<TableView>
+				<TableViewSection headerTitle="About HKBU">
+					<TableViewRow>
+						<TextArea id="textArea2" />
+					</TableViewRow>
+				</TableViewSection>
+			</TableView>
+
+    </Window>
+</Alloy>
